@@ -15,8 +15,8 @@ buildscript {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "Java :: Nyfix Portal :: Portal application"
-        property "sonar.projectKey", "org.sonarqube:nyfix-portal"
+        property "sonar.projectName", "Java :: sample Portal application :: Portal application description "
+        property "sonar.projectKey", "org.sonarqube:portalApp"
     }
 }
 repositories {
