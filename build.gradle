@@ -1,0 +1,36 @@
+
+apply plugin: 'org.sonarqube'
+
+
+
+buildscript {
+    repositories {
+		 maven {url "https://plugins.gradle.org/m2/"}
+    }
+
+    dependencies {
+		classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.0.1'
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java :: Nyfix Portal :: Portal application"
+        property "sonar.projectKey", "org.sonarqube:nyfix-portal"
+    }
+}
+repositories {
+    mavenCentral()
+    maven { url "http://maven.springframework.org/release" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+	maven {url "https://plugins.gradle.org/m2/"}
+}
+
+dependencies {
+    
+	compile 'org.sonarsource.java:sonar-java-plugin:3.13.1'
+	compile 'org.sonarsource.sonarqube:sonar-scanner-engine:5.5-RC2'
+
+}
+
+
