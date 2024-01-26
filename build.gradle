@@ -1,15 +1,5 @@
 
-plugins {
-  id "org.sonarqube" version "4.4.1.3373"
-}
-
-sonar {
-  properties {
-    property "sonar.projectKey", "devopscicd17_sonarqube-sample"
-    property "sonar.organization", "devopscicd17"
-    property "sonar.host.url", "https://sonarcloud.io"
-  }
-}
+apply plugin: 'org.sonarqube'
 
 
 
@@ -23,6 +13,11 @@ buildscript {
     }
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java :: sample Portal application :: Portal application description "
+        property "sonar.projectKey", "org.sonarqube:portalApp"
+    }
 }
 repositories {
     mavenCentral()
