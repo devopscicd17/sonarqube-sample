@@ -11,7 +11,7 @@ buildscript {
   dependencies {
     classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:4.4.1.3373")
   }
-}
+
 
 apply(plugin = "org.sonarqube")
 
